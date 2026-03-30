@@ -1,1 +1,1 @@
-console.log("Welcome to Kenneth Square")
+console.log("Welcome to Kenneth Square!");
