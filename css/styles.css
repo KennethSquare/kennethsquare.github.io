@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 10px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+#canvas-container { position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+/* Site Header */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #000000;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.main-header {
+    position: absolute; /* or fixed if you want it to stay while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0); /* Semi-transparent background */
+    
+    /* This makes the header sit ON TOP of the animation */
+    z-index: 10; 
+    
+   
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+  .logo {
+    width: 400px;
+    height: auto;
+    margin-right: 2rem;
+}
+
+
+
+/* Navigation */
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  position: relative;
+}
+
+/* Hover / focus states */
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #0096FF;
+}
+
+/* Subtle underline animation */
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #1a73e8;
+  transition: width 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+  width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+
+.contact-email {
+  max-width: 500px;
+  margin: 1rem auto;
+  border: 10px solid #000000;
+  padding: 3rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+.contact-email h1 {
+  margin-bottom: 1rem;
+  color: #222222;
+}
+
+.contact-email p {
+  color: #444444;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.email-display {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.email {
+  font-weight: 600;
+  color: #1a73e8;
+}
+
+.email span {
+  display: inline-block;
+}
+
+.response-note {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-top: 2rem;
+}
+
+/* Email Button */
+
+.email-button {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: #1a73e8;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.email-button:hover {
+  background-color: #155fc2;
+}
+
+.box1-content {
+    /* Position it over the fixed background */
+    position: relative; 
+    z-index: 5; 
+    
+    /* Center the text on the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh; /* Make the container full screen */
+    text-align: center;
+    
+    /* Visuals */
+    color: white;
+    padding: 0 20px;
+    pointer-events: none; /* Allows mouse to still "hit" the animation if needed */
+}
+
+.box1-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    /* Adding a subtle glow to match your nodes */
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    color: #cccccc
+}
+
+.box1-content h2 {
+    font-size: 1.4rem;
+    max-width: 600px;
+    line-height: 1.4;
+    color: #cccccc; /* Slightly dimmed for better readability */
+}
+
+.box1-content p {
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1;
+    color: #c1c1c1; /* Slightly dimmed for better readability */
+}
+
+/* Make sure your buttons are clickable */
+.box1-button {
+    pointer-events: auto; 
+    margin-top: 2rem;
+    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid #0096FF;
+    color: #0096FF;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.box1-button:hover {
+    background: #0096FF;
+    color: black;
+    box-shadow: 0 0 20px #00d4ff;
+}
+
+
+/* Mobile Friendly */
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center; /* Centers the logo and nav vertically */
+    gap: 0.75rem;
+    padding: 0; /* Ensures no extra padding is pushing it */
+  }
+
+  .logo {
+    /* Change 400px to a percentage or a smaller max-width */
+    width: 100%; 
+    max-width: 350px; /* Limits how big it can get */
+    height: auto;
+    
+    /* Center it if it's in a column layout */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+  }
+}
