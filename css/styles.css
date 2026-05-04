@@ -191,10 +191,10 @@ p {
     align-items: center;
     height: 95vh; /* Make the container full screen */
     text-align: center;
+    padding-bottom: 10%;
     
     /* Visuals */
     color: white;
-    padding: 0 20px;
     pointer-events: none; /* Allows mouse to still "hit" the animation if needed */
 }
 
@@ -285,4 +285,5 @@ p {
     margin-right: auto;
     display: block; 
   }
+
 }
