@@ -199,9 +199,9 @@ p {
 }
 
 .box1-content h1 {
-    font-size: 3rem;
+    font-size: 4vw;
     margin-bottom: 1rem;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     /* Adding a subtle glow to match your nodes */
     text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
@@ -209,7 +209,7 @@ p {
 }
 
 .box1-content h2 {
-    font-size: 1.4rem;
+    font-size: 2vw;
     max-width: 600px;
     line-height: 1.4;
     color: #cccccc; /* Slightly dimmed for better readability */
@@ -243,17 +243,19 @@ p {
 
 .services-section {
   display: flex;
+  /* font-size: 1.8vw; */
   justify-content: space-between;
   gap: 50px;
   padding: 80px 10%;
   text-align: left; /* Fenix uses left alignment */
+
 }
 
-/* Icon Styling */
-.icon-style {
-  display: block;
+.service-card .icon-style {
+  font-size: 4vw;
   color: #0096FF;
 }
+
 
 
 /* Mobile Friendly */
@@ -266,18 +268,32 @@ p {
     padding: 0; /* Ensures no extra padding is pushing it */
   }
 
-    .services-section {
+  .services-section {
     flex-direction: column;
+    font-size: 2.8vw;
     height: 45%;
     padding-top: 40px;
     padding-bottom: 40px;
 
   }
 
+  .box1-content h1 {
+    font-size: 5vw; /* Scales better on smaller screens */
+  }
+
+  .box1-content h2 {
+    font-size: 2.5vw; /* Scales better on smaller screens */
+    max-width: 350px;
+  }
+
+  .box1-content p {
+    font-size: 2vw; /* Scales better on smaller screens */
+  }
+
   .logo {
     /* Change 400px to a percentage or a smaller max-width */
     width: 100%; 
-    max-width: 350px; /* Limits how big it can get */
+    max-width: 400px; /* Limits how big it can get */
     height: auto;
     
     /* Center it if it's in a column layout */
@@ -285,5 +301,10 @@ p {
     margin-right: auto;
     display: block; 
   }
+
+  .service-card .icon-style {
+  font-size: 6vw;
+  color: #0096FF;
+}
 
 }
