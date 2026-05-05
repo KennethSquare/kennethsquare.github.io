@@ -189,7 +189,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 95vh; /* Make the container full screen */
+    height: 90vh; /* Make the container full screen */
     text-align: center;
     padding-bottom: 10%;
     
@@ -201,7 +201,7 @@ p {
 .box1-content h1 {
     font-size: 4vw;
     margin-bottom: 1rem;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     /* Adding a subtle glow to match your nodes */
     text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
@@ -216,7 +216,7 @@ p {
 }
 
 .box1-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     max-width: 600px;
     line-height: 1;
     color: #c1c1c1; /* Slightly dimmed for better readability */
@@ -282,12 +282,12 @@ p {
   }
 
   .box1-content h2 {
-    font-size: 2.5vw; /* Scales better on smaller screens */
+    font-size: 3vw; /* Scales better on smaller screens */
     max-width: 350px;
   }
 
   .box1-content p {
-    font-size: 2vw; /* Scales better on smaller screens */
+    font-size: 3vw; /* Scales better on smaller screens */
   }
 
   .logo {
