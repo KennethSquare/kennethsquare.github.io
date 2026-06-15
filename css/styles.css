@@ -1,110 +1,13 @@
 body {
+    display: flex;
     font-family: Arial, sans-serif;
     background-color: #000000;
-    margin: 10px;
+    min-height: 100vh;
+    margin: 0;
     text-align: center;
     font-family: Helvetica, sans-serif;
-}
-
-#canvas-container { position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-
-/* Site Header */
-
-.site-header {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #000000;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto; 
-}
-
-.main-header {
-    position: absolute; /* or fixed if you want it to stay while scrolling */
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 4rem;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0); /* Semi-transparent background */
-    
-    /* This makes the header sit ON TOP of the animation */
-    z-index: 10; 
-    
-   
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Logo */
-
-  .logo {
-    width: 400px;
-    height: auto;
-    margin-right: 2rem;
-}
-
-
-
-/* Navigation */
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  padding: 0.25rem 0;
-  position: relative;
-}
-
-/* Hover / focus states */
-
-.main-nav a:hover,
-.main-nav a:focus {
-  color: #0096FF;
-}
-
-/* Subtle underline animation */
-
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background-color: #1a73e8;
-  transition: width 0.2s ease;
-}
-
-.main-nav a:hover::after,
-.main-nav a:focus::after {
-  width: 100%;
 }
 
 h1 {
@@ -241,22 +144,46 @@ p {
     box-shadow: 0 0 20px #00d4ff;
 }
 
-.services-section {
-  display: flex;
-  /* font-size: 1.8vw; */
-  justify-content: space-between;
-  gap: 50px;
-  padding: 80px 10%;
-  text-align: left; /* Fenix uses left alignment */
-
-}
-
 .service-card .icon-style {
   font-size: 4vw;
   color: #0096FF;
 }
 
+.animated-logo {
+    /* Set the size of your logo container */
+    width: 400px;
+    height: 400px;
 
+    /* The Animation (Your provided CSS) */
+    background: linear-gradient(311deg, #0098ff, #005fff, #00aeff, #ff77f4);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 23s ease infinite;
+    animation: AnimationName 23s ease infinite;
+
+    /* The Masking Property */
+    -webkit-mask-image: url('/images/ks-logo.svg');
+    mask-image: url('/images/ks-logo.svg');
+    
+    /* Ensure the mask covers the div properly */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+/* Keyframes remain exactly as you provided */
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 7%}
+    50%{background-position:100% 94%}
+    100%{background-position:0% 7%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 7%}
+    50%{background-position:100% 94%}
+    100%{background-position:0% 7%}
+}
 
 /* Mobile Friendly */
 
