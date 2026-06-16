@@ -151,8 +151,8 @@ p {
 
 .animated-logo {
     /* Set the size of your logo container */
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
 
     /* The Animation (Your provided CSS) */
     background: linear-gradient(311deg, #0098ff, #005fff, #00aeff, #ff77f4);
