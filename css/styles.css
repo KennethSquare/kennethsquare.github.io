@@ -185,6 +185,23 @@ p {
     100%{background-position:0% 7%}
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 25px;
+}
+
+.social-links a {
+  color: #868686;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
 /* Mobile Friendly */
 
 @media (max-width: 768px) {
